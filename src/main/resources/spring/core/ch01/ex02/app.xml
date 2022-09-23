@@ -7,14 +7,23 @@
 	<bean id='pistol' class='spring.core.ch01.ex01.Pistol'/>
 	<bean id='rifle' class='spring.core.ch01.ex01.Rifle'/>
 	
-	<bean id='shooter1' class='spring.core.ch01.ex02.Shooter'>
-		<constructor-arg value='최한석'/>
-		<constructor-arg ref='pistol'/>
+	<bean id='shooterA' class='spring.core.ch01.ex02.Shooter'>
+		<constructor-arg value='청명'/>
+		<constructor-arg ref='pistol'/> <!-- class는 reference로 받아옴 -->
 	</bean>
 	<!-- container에 담긴걸로 DI한다. -->
 	
-	<bean id='shooter2' class='spring.core.ch01.ex02.Shooter'>
-		<property name='name' value='한아름'/>
+	<bean id='shooterB' class='spring.core.ch01.ex02.Shooter'>
+		<property name='name' value='유이설'/>
 		<property name='gun' ref='rifle'/>
 	</bean>
 </beans>
+
+<!-- 
+	IOC는 스프링 컨테이너가 함 
+
+	<bean id='pistol' class='~~ Pistol'/>
+	> new 생성자로 만들게끔 설정하는 것이다.
+	
+	<bean shooter1 는 ~~ ex02.Shooter class에서 참고해서 만들면돼라고 알려주는거
+-->
