@@ -7,7 +7,7 @@ import org.springframework.context.annotation.FilterType;
 
 @Configuration
 @ComponentScan(basePackages = "spring.core.ch01.ex06",			// 여기 Scan 할 건데,
-		excludeFilters = @Filter(type = FilterType.ANNOTATION,  // Annotation 뺄거야
+		excludeFilters = @Filter(type = FilterType.ANNOTATION,  // Annotation, IOC에서 뺄거야 
 						classes = (NoComponent.class))) 		// NoComponent 이름의 어노테이션을 뺸다
 public class AppConfig {
 

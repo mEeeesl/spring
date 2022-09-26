@@ -8,7 +8,7 @@ import spring.core.ch01.ex02.Shooter;
 public class Main {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-		
+		// ▼ 컨테이너에서 Bean 꺼내기
 		Shooter shooter1 = ctx.getBean("shooter1", Shooter.class);
 		Shooter shooter2 = ctx.getBean("shooter2", Shooter.class);
 		

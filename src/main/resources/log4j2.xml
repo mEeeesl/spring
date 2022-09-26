@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name='console' target='SYSTEM_OUT'>
+			<PatternLayout/>
+		</Console>
+		<RollingFile name='file' fileName='c:/DEV/spring.core.log'
+			filePattern='c:/DEV/spring.core.%d{yyyy-MM-dd-HH-mm-ss}.log'> <!-- %d = 날짜 -->
+			<PatternLayout pattern='[%-5p: %d{yyyy/MM/dd HH:mm:ss}] %m%n'/> <!-- %m 메시지 -->
+		</RollingFile>
+	</Appenders>
+</Configuration>

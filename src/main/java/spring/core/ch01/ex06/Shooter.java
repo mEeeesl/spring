@@ -15,3 +15,5 @@ public class Shooter {
 		if(rifle != null) rifle.fire();
 	}
 }
+
+//과제: rifle이 있으면 rifle을 사용하고, 없으면 사용치 않도록 하라.

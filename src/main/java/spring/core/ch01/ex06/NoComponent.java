@@ -5,8 +5,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)  // RUNTIME동안 살기
+@Target(ElementType.TYPE)	// class 적용
 public @interface NoComponent { // Annotation을 직접 만들어서 사용하기
 	
 }

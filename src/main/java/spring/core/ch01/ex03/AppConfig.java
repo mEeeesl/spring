@@ -21,7 +21,7 @@ public class AppConfig {
 	}
 	
 	@Bean
-	public Shooter shooter1() { // shooter1 < Id임 
+	public Shooter shooter1() { // shooter1 < Bean의 Id임 ( 명사형 ) 
 		return new Shooter("최한석", pistol()); // pistol()하면 new Pistol 되니 Gun gun이 됨
 	}
 	// 컨테이너는 싱글톤으로 저장하기 때문에 중복안되고 ID별로 1개씩 갖고있다한다.

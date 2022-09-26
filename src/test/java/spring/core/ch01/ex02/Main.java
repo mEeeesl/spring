@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) { // ▼ 컨테이너 생성. ( IOC, DI 준비되야, 정상생성됨 )
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("app.xml", Main.class);
 		 
 		Shooter shooter1 = ctx.getBean("shooterA", Shooter.class);

@@ -17,6 +17,8 @@ public class Shooter {
 	}
 }
 
+// rifle이 있으면 rifle을 사용. 없으면 그냥 실행하게끔. > try ~ catch 
+
 /* IOC - @Component
  * DI  - @Autowired
  * 
@@ -30,6 +32,6 @@ public class Shooter {
  * 1. 해당하는 Component를 찾아서 DI 시키고
  * 2. 그게 안되면 변수명과 ID가 일치하는 Component를 DI 시킴
  * 
- * @Nullable-> Component 못찾아도 괜찮아 실행은 해라
+ * @Nullable-> Component 못찾아도 괜찮아, 실행은 해라
  * */
 

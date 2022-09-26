@@ -12,7 +12,7 @@ import spring.core.ch01.ex02.Shooter;
 @Import({Config1.class, Config2.class}) // 흩어져있는 Configuration을 통합시키기.
 public class AppConfig { // 총 3개의 Configuration이 하나로 통합되는 것이다. 
 	@Autowired private Gun pistol; // 멤버변수
-	@Autowired private Gun rifle;
+	@Autowired private Gun rifle;  // @Autowired - DI
 	
 	@Bean
 	public Shooter shooter1() {
@@ -35,6 +35,12 @@ public class AppConfig { // 총 3개의 Configuration이 하나로 통합되는 
  * 컨테이너는 해당 녀석을 찾아서 DI를 시켜준다.
  * 
  * @Autowired란, 스프링 DI(Dependency Injection)에서 사용되는 어노테이션입니다.  
+ * 
+ * 1. bean이 싱글톤일 경우 ( bean type이 1개 일 경우 ) - ex) Gun pistol
+ *  컨테이너 bean중 타입이 일치한것을 찾는다
+ *  
+ * 2. bean type이 n개 있을 경우. - ex) Gun pistol , Gun rifle
+ *  타입과 변수명까지 일치한 것을 찾는다.
  *  
  * 슈터1 슈터2는 Bean으로 선언한다 지금은.
  * */
