@@ -9,7 +9,7 @@ public class Calculator {
 		System.out.println(1 + 2);
 	}
 	
-	public void minus() {
+	public void minus() { // Annotation이 없어서 JP로 지정 안됨
 		System.out.println(1 - 2);
 	}
 	

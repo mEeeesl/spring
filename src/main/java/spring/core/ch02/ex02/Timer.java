@@ -21,7 +21,7 @@ public class Timer { // 시간 측정하는 부가기능 모듈
 		System.out.println(jp.getSignature()); // 메소드의 시그니처 (리턴타입, 이름, 매개변수) 정보가 저장된 Signature 객체리턴 - getSignature() 
 		
 		long start = System.currentTimeMillis();
-		Result result = (Result)jp.proceed(); // clock이 JoinPoint 실행
+		Result result = (Result)jp.proceed(); // clock이 JoinPoint를 실행
 		long end = System.currentTimeMillis();
 		
 		System.out.println("경과시간: " + (end - start));

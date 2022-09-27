@@ -9,8 +9,8 @@ public class Main {
 		
 		Calculator calculator = ctx.getBean(Calculator.class);
 		
-		calculator.add(); // 3 execution(Calculator.add())
-		calculator.minus(); // -1
+		calculator.add(); 	 // 3 execution(Calculator.add())
+		calculator.minus();  // -1
 		calculator.divide(); // execution(public void spring.core.ch02.ex04.Calculator.divide()): / by zero
 							 //	execution(Calculator.divide())
 		

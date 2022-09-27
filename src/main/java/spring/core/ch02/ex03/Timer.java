@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Aspect	// Bean을 지칭.  갖고있는 기능은 Advice + PointCut
 @Component // IOC
 public class Timer {
-	@Before("execution(* spring..*(int))") // 파라미터가 있는 method
+	@Before("execution(* spring..*(int))") // 파라미터를 int로 받는 method
 	public void clockStart(JoinPoint jp) {
 		System.out.println(jp.toShortString() + " - Before");
 		System.out.println("시작 시각: " + LocalDateTime.now());
@@ -24,10 +24,10 @@ public class Timer {
 		System.out.println("종료 시각: " + LocalDateTime.now());
 	} // JP 이후 실행
 	
-	@AfterReturning(pointcut="bean(calc*)", returning="result") // jp의 리턴값에 이름붙이기(파라미터 변수의 이름)
+	@AfterReturning(pointcut="bean(calc*)", returning="result") // returning => jp의 리턴값에 이름붙이기(파라미터 변수의 이름)
 	public void printResult(JoinPoint jp, int result) {
 		System.out.println(jp.toShortString() + ": " + result + " - AfterReturning");
-	} // JP 리턴한 후 실행
+	} // JP 리턴 성공한 후 실행
 }
 
 
@@ -38,6 +38,9 @@ public class Timer {
   spring..=> 0개 이상의 Something - ex) spring.core ~ / spring.world.hello ~ 등등
   *(int)) => 파라미터가 int인 모든 Method
 
+
+ * Advice의 5가지 유형 
+ * 
  * @Before (이전) : 어드바이스 타겟 메소드가 호출되기 전에 어드바이스 기능을 수행
  * 
  * @After (이후) : 타겟 메소드의 결과에 관계없이(성공, 예외 관계없이) 타겟 메소드가 완료되면 어드바이스 기능을 수행
